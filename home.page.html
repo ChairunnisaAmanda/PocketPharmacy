@@ -1,0 +1,72 @@
+<ion-header [translucent]="true" #headerwrapper>
+  <ion-toolbar>
+    <ion-title>
+      Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="!searching">
+
+<ion-header collapse="condense" #condenseheader>
+  <ion-toolbar >
+  <div class = "ion-text-center">
+    <ion-title size="large">Search</ion-title>
+  </div>
+  
+  </ion-toolbar>
+  <ion-toolbar>
+    <div class="search">
+      <ion-input placeholder="Enter a drug name" (ionFocus)="toggleSearch()"
+      [class.active-search]="searching"
+      [class.inactive-search]="!searching">
+        <ion-icon name="search"></ion-icon>
+      </ion-input>
+      <ion-button fill = "clear" color="primary" size="small" (click)="toggleSearch()"
+      [ngClass]="{'visible-btn':searching, 'hidden-btn':!searching}">
+        Cancel
+      </ion-button>
+    </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<div class="search-overlay" #overlay (click)="toggleSearch()"></div>
+
+<div class = "ion-flex-center">
+  <h4>
+    Browse A-Z
+  </h4>
+</div>
+
+
+  <ion-list>
+    <ion-item button routerLink="/search-a">A</ion-item>
+    <ion-item button>B</ion-item>
+    <ion-item button>C</ion-item>
+    <ion-item button>D</ion-item>
+    <ion-item button>E</ion-item>
+    <ion-item button>F</ion-item>
+    <ion-item button routerLink="/search-g">G</ion-item>
+    <ion-item button>H</ion-item>
+    <ion-item button>I</ion-item>
+    <ion-item button>J</ion-item>
+    <ion-item button>K</ion-item>
+    <ion-item button>L</ion-item>
+    <ion-item button>M</ion-item>
+    <ion-item button>N</ion-item>
+    <ion-item button>O</ion-item>
+    <ion-item button>P</ion-item>
+    <ion-item button>Q</ion-item>
+    <ion-item button>R</ion-item>
+    <ion-item button>S</ion-item>
+    <ion-item button>T</ion-item>
+    <ion-item button>U</ion-item>
+    <ion-item button>V</ion-item>
+    <ion-item button>W</ion-item>
+    <ion-item button>X</ion-item>
+    <ion-item button>Y</ion-item>
+    <ion-item button>Z</ion-item>
+
+  </ion-list>
+</ion-content>
